@@ -1,0 +1,10 @@
+
+import json
+
+version_json = '''
+{"date": "2022-07-31T14:02:04.882393", "dirty": false, "error": null, "full-revisionid": "018fd695ebadad7eed102ec3a00dcfa70cf44e83", "version": "1.0.0"}'''  # END VERSION_JSON
+
+
+def get_versions():
+    return json.loads(version_json)
+
