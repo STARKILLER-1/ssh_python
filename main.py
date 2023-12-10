@@ -17,7 +17,8 @@ class SSHClient:
         # Словарь с регулярными выражениями для раскраски вывода.
         self.color_patterns = {
             r"error": "\033[31m",  # Красный цвет для сообщений об ошибках.
-            r"command not found": "\033[31m",  # Красный цвет для сообщения "command not found".
+            r"command not found": "\033[31m",
+            r"No such file or directory": "\033[31m",  # Красный цвет для сообщения "command not found".
             # Добавьте другие паттерны по необходимости.
         }
 
