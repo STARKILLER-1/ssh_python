@@ -1,6 +1,7 @@
 import re  # Импорт модуля регулярных выражений для обработки текста.
 from ssh2.session import Session  # Импорт класса Session из модуля ssh2 для работы с SSH.
 from socket import socket, AF_INET, SOCK_STREAM  # Импорт необходимых компонентов для создания сетевого соединения.
+import getpass
 
 # Определение класса SSHClient, который будет управлять SSH-соединениями.
 class SSHClient:
@@ -86,7 +87,7 @@ class SSHClient:
 def main():
     hostname = input("Введите IP-адрес: ")  # Запрос IP-адреса сервера.
     username = input("Введите имя пользователя: ")  # Запрос имени пользователя.
-    password = input("Введите пароль: ")  # Запрос пароля.
+    password = getpass.getpass("Введите пароль: ")  # Запрос пароля.
     port = int(input("Введите порт (если порт 22, то нажмите Enter): ") or 22)  # Запрос порта с дефолтным значением 22.
     print("Начал подключаться к серверу")  # Информационное сообщение о начале подключения.
     try:
